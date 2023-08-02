@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="Menu.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bxslider.css" />
+    <!-- https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+    <div class="frontheader">
+        <h6>P.O.C. Email: example@gmail.com | Number: 02-1234-5678 </h6>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="Main3.html" class="logo">
+                <img src="images\logo.png" alt="Logo" />
+            </a>
+            <ul class="menu">
+                <li>
+                    <a href="#">Menu1</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">menu1-1</a></li>
+                        <li><a href="#">menu1-2</a></li>
+                        <li><a href="#">menu1-3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Menu2</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">menu2-1</a></li>
+                        <li><a href="#">menu2-2</a></li>
+                        <li><a href="#">menu2-3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Menu3</a>
+                    <ul class="sub_menu">
+                        <!-- <div class="sub_menu_wrapper"> -->
+                        <li><a href="#">menu3-1</a></li>
+                        <li><a href="#">menu3-2</a></li>
+                        <li><a href="#">menu3-3</a></li>
+                        <!-- </div> -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Menu4</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">menu4-1</a></li>
+                        <li><a href="#">menu4-2</a></li>
+                        <li><a href="#">menu4-3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="section1">
+            <nav class="bar">
+                <a href="#">Menu Item 1</a>
+                <a href="#">Menu Item 2</a>
+                <a href="#">Menu Item 3</a>
+                <a href="#">Menu Item 4</a>
+                <!-- Add more menu items as needed -->
+              </nav>
+              <div class="content">
+                <img src="images/con1.png" alt="Image description">
+              </div>
+        </section>
+    </div>
+
+
+
+
+
+    <!-- ------------------------script------------------------- -->
+    <script type="text/javascript">
+        const menuItems = document.querySelectorAll(".menu li");
+        const subMenus = document.querySelectorAll(".sub_menu");
+        function hideAllSubMenus() {
+            subMenus.forEach((subMenu) => {
+                subMenu.style.display = "none";
+            });
+        }
+        menuItems.forEach((menuItem) => {
+            const subMenu = menuItem.querySelector(".sub_menu");
+            menuItem.addEventListener("mouseenter", () => {
+                if (subMenu !== null) {
+                    hideAllSubMenus();
+                    subMenu.style.display = "flex";
+                    console.log("menu on");
+                }
+            });
+        });
+
+        // 각 하위 메뉴에도 마우스 이벤트 추가
+        subMenus.forEach((subMenu) => {
+            subMenu.addEventListener("mouseenter", () => {
+                subMenu.style.display = "flex";
+            });
+
+            subMenu.addEventListener("mouseleave", () => {
+                subMenu.style.display = "none";
+            });
+        });
+
+    </script>
+</body>
+
+</html>
