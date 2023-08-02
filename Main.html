@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="Main3.css" rel="stylesheet" />
+  <link rel="stylesheet" href="bxslider.css" />
+  <!-- https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+  <div class="frontheader">
+    <h6>P.O.C. Email: example@gmail.com | Number: 02-1234-5678 </h6>
+  </div>
+  <header>
+    <nav class="navbar">
+      <a href="Main3.html" class="logo">
+        <img src="images\logo.png" alt="Logo" />
+      </a>
+      <ul class="menu">
+        <li>
+          <a href="Menu.html">Menu1</a>
+          <ul class="sub_menu">
+            <li><a href="#">menu1-1</a></li>
+            <li><a href="#">menu1-2</a></li>
+            <li><a href="#">menu1-3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Menu2</a>
+          <ul class="sub_menu">
+            <li><a href="#">menu2-1</a></li>
+            <li><a href="#">menu2-2</a></li>
+            <li><a href="#">menu2-3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Menu3</a>
+          <ul class="sub_menu">
+            <!-- <div class="sub_menu_wrapper"> -->
+            <li><a href="#">menu3-1</a></li>
+            <li><a href="#">menu3-2</a></li>
+            <li><a href="#">menu3-3</a></li>
+            <!-- </div> -->
+          </ul>
+        </li>
+        <li>
+          <a href="#">Menu4</a>
+          <ul class="sub_menu">
+            <li><a href="#">menu4-1</a></li>
+            <li><a href="#">menu4-2</a></li>
+            <li><a href="#">menu4-3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="section1">
+    <div class = "slogan">
+      <h2>Company Slogan<br>
+      </h2>
+      <h4> Company Slogan<br>
+        Company Slogan<br>
+        Company Slogan<br></h4>
+    </div>
+    <div style="width: 100px;"></div>
+    <div class="sliderconatainer">
+      <ul class="bxslider">
+        <li><img src="images\art1.png" alt="Art1" /></li>
+        <li><img src="images\art2.png" alt="Art2" /></li>
+        <li><img src="images\art3.png" alt="Art3" /></li>
+        <li><img src="images\art4.png" alt="Art4" /></li>
+        <li><img src="images\art5.png" alt="Art5" /></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section2">
+    <div class="button">
+      <a href="#">
+        <img src="images\\btn1.png" alt="btn1">
+      </a>
+      <h1><a href="#">Button1</a></h1>
+      <p>Text explaining about button1<br>
+        Text explaining about button1<br>
+        Text explaining about button1
+      </p>
+      <a href="#" class="goto-page">Go to page</a>
+    </div>
+
+    <div class="button">
+      <a href="#">
+        <img src="images\\btn2.png" alt="btn1">
+      </a>
+      <h1><a href="#">Button2</a></h1>
+      <p>Text explaining about button2<br>
+        Text explaining about button2<br>
+        Text explaining about button2
+      </p>
+      <a href="#" class="goto-page">Go to page</a>
+    </div>
+
+    <div class="button">
+      <a href="#">
+        <img src="images\\btn3.png" alt="btn3">
+      </a>
+      <h1><a href="#">Button3</a></h1>
+      <p>Text explaining about button3<br>
+        Text explaining about button3<br>
+        Text explaining about button3
+      </p>
+      <a href="#" class="goto-page">Go to page</a>
+    </div>
+
+    <div class="button">
+      <a href="#">
+        <img src="images\\btn4.png" alt="btn4">
+      </a>
+      <h1><a href="#">Button4</a></h1>
+      <p>Text explaining about button4<br>
+        Text explaining about button4<br>
+        Text explaining about button4
+      </p>
+      <a href="#" class="goto-page">Go to page</a>
+    </div>
+  </section>
+
+  <!-- ------------------------script------------------------- -->
+  <script type="text/javascript">
+    const menuItems = document.querySelectorAll(".menu li");
+    const subMenus = document.querySelectorAll(".sub_menu");
+    function hideAllSubMenus() {
+      subMenus.forEach((subMenu) => {
+        subMenu.style.display = "none";
+      });
+    }
+    menuItems.forEach((menuItem) => {
+      const subMenu = menuItem.querySelector(".sub_menu");
+      menuItem.addEventListener("mouseenter", () => {
+        if (subMenu !== null) {
+          hideAllSubMenus();
+          subMenu.style.display = "flex";
+          console.log("menu on");
+        }
+      });
+    });
+
+    // 각 하위 메뉴에도 마우스 이벤트 추가
+    subMenus.forEach((subMenu) => {
+      subMenu.addEventListener("mouseenter", () => {
+        subMenu.style.display = "flex";
+      });
+
+      subMenu.addEventListener("mouseleave", () => {
+        subMenu.style.display = "none";
+      });
+    });
+
+    $(document).ready(function () {
+      $(".bxslider").bxSlider({
+        mode: "horizontal", // 가로 방향 수평 슬라이드
+        speed: 500, // 이동 속도를 설정
+        pager: true, // 현재 위치 페이징 표시 여부 설정
+        moveSlides: 1, // 슬라이드 이동시 개수
+        minSlides: 1, // 최소 노출 개수
+        maxSlides: 1, // 최대 노출 개수
+        slideMargin: 0, // 슬라이드간의 간격
+        auto: true, // 자동 실행 여부
+        autoHover: true, // 마우스 호버시 정지 여부
+        controls: false, // 이전 다음 버튼 노출 여부
+      });
+    });
+  </script>
+</body>
+
+</html>
