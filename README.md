@@ -1,0 +1,2 @@
+# easymotion
+Easymotion main homepage
