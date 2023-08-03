@@ -175,3 +175,45 @@ header {
     display: block;
     margin: auto; /* Center the image horizontally within .content div */
   }
+
+/* Mobile devices */
+@media only screen and (max-width: 767px) {
+  .navbar {
+    flex-direction: column; /* Stack the logo and menu items vertically on small screens */
+  }
+  .logo {
+    margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
+  }
+  .menu {
+    flex-direction: column; /* Stack the menu items vertically on small screens */
+  }
+  .menu li {
+    margin: 5px 0; /* Adjust the menu item margin for better spacing on mobile */
+  }
+  .sub_menu {
+    position: static; /* Remove absolute positioning for submenus on mobile */
+    display: none; /* Hide submenus by default on mobile */
+  }
+  .menu li:hover .sub_menu {
+    display: block; /* Show submenus on hover on mobile */
+  }
+}
+
+/* Tablets and larger devices */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    justify-content: space-between; /* Center the logo and menu items horizontally on larger screens */
+  }
+  .logo {
+    margin: 0; /* Reset the logo margin for larger screens */
+  }
+  .menu {
+    flex-direction: row; /* Display the menu items in a row on larger screens */
+  }
+  .menu li {
+    margin: 0 10px; /* Adjust the menu item margin for better spacing on larger screens */
+  }
+  .sub_menu {
+    position: absolute; /* Bring back absolute positioning for submenus on larger screens */
+  }
+}
