@@ -213,21 +213,21 @@ header {
   }
 }
 
-/* Tablets and larger devices */
+/* Tablets and larger devices 
 @media only screen and (min-width: 768px) {
   .navbar {
-    justify-content: space-between; /* Center the logo and menu items horizontally on larger screens */
+    justify-content: space-between; /* Center the logo and menu items horizontally on larger screens 
   }
   .logo {
-    margin: 0; /* Reset the logo margin for larger screens */
+    margin: 0; /* Reset the logo margin for larger screens 
   }
   .menu {
-    flex-direction: row; /* Display the menu items in a row on larger screens */
+    flex-direction: row; /* Display the menu items in a row on larger screens 
   }
   .menu li {
-    margin: 0 10px; /* Adjust the menu item margin for better spacing on larger screens */
+    margin: 0 10px; /* Adjust the menu item margin for better spacing on larger screens 
   }
   .sub_menu {
-    position: absolute; /* Bring back absolute positioning for submenus on larger screens */
+    position: absolute; /* Bring back absolute positioning for submenus on larger screens 
   }
-}
+}*/
