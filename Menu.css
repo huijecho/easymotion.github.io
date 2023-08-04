@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Pretendard-Regular', sans-serif;
 }
 
 .frontheader {
@@ -17,9 +18,7 @@ body {
 
 .frontheader h6 {
     text-align: right;
-    margin: 0;
-    margin-right: 10px;
-    /* Adjust the value as per your desired spacing */
+    margin: 5px 0 0 10px; /* Adjust the margin-top value */
 }
 
 header {
@@ -132,26 +131,30 @@ header {
 }
 
 .section1 {
-    margin-top: 135px;
+    margin-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #adadad; */
+    background-color:#0047a2;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 800px;
-    height: 600px;
+    width: 100vw;
+    height: 23vh;
     /* Set the desired height for the image container */
     overflow: hidden;
+    position: relative; /* Add this */
 }
 
 .bar {
-    flex: 0 0 150px; /* Set the width of the .bar div to 200px */
+    flex: 0 0 100vw; /* Set the width of the .bar div to 200px */
     display: flex;
-    flex-direction: column;
+    justify-content: center; /* Center-align menu items horizontally */
     background-color: #f2f2f2;
-    margin-top: -400px; /* Move the .bar div up by applying a negative margin */
+    position: absolute; /* Change this */
+    bottom: 0; /* Align the bottom of .bar with the bottom of .section1 */
+    left: 0; /* Align .bar to the left edge */
+    right: 0; /* Align .bar to the right edge */
   }
   
   .bar a {
@@ -176,44 +179,43 @@ header {
     margin: auto; /* Center the image horizontally within .content div */
   }
 
-/* Mobile devices */
-@media only screen and (max-width: 767px) {
-  .navbar {
-    flex-direction: column; /* Stack the logo and menu items vertically on small screens */
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
   }
-  .logo {
-    margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
-  }
-  .menu {
-    flex-direction: column; /* Stack the menu items vertically on small screens */
-  }
-  .menu li {
-    margin: 5px 0; /* Adjust the menu item margin for better spacing on mobile */
-  }
-  .sub_menu {
-    position: static; /* Remove absolute positioning for submenus on mobile */
-    display: none; /* Hide submenus by default on mobile */
-  }
-  .menu li:hover .sub_menu {
-    display: block; /* Show submenus on hover on mobile */
-  }
+
+  .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#fadd65;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed; /* Change to 'fixed' positioning */
+  bottom: 0; /* Align the bottom of the .footer to the bottom of the viewport */
+  width: 100%; /* Full width */
+  height: 70px; /* Set the desired height */
+  overflow: hidden;
 }
 
-/* Tablets and larger devices */
-@media only screen and (min-width: 768px) {
-  .navbar {
-    justify-content: space-between; /* Center the logo and menu items horizontally on larger screens */
-  }
-  .logo {
-    margin: 0; /* Reset the logo margin for larger screens */
-  }
-  .menu {
-    flex-direction: row; /* Display the menu items in a row on larger screens */
-  }
-  .menu li {
-    margin: 0 10px; /* Adjust the menu item margin for better spacing on larger screens */
-  }
-  .sub_menu {
-    position: absolute; /* Bring back absolute positioning for submenus on larger screens */
-  }
+.footer p{
+  color:#000000;
+  /* font-style:oblique; */
+}
+.text {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Center-align horizontally */
+    text-align: left; /* Center-align text content */
+    margin: 0 auto; /* Horizontally center the .text container */
+}
+.text img{
+    max-width: 50%; /* Ensure the image does not exceed the width of the .content div */
+    display: block;
+    margin: auto; /* Center the image horizontally within .content div */
 }
