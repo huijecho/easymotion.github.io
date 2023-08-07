@@ -200,17 +200,20 @@ header {
     margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
   }
   .menu {
-    flex-direction: column; /* Stack the menu items vertically on small screens */
+    flex-direction:row; /* Stack the menu items vertically on small screens */
   }
   .menu li {
     margin: 5px 0; /* Adjust the menu item margin for better spacing on mobile */
   }
   .sub_menu {
-    position: static; /* Remove absolute positioning for submenus on mobile */
-    display: none; /* Hide submenus by default on mobile */
+    display: none !important;
+    position: static; /* 필요한 경우 정적 위치로 변경 */
   }
   .menu li:hover .sub_menu {
-    display: block; /* Show submenus on hover on mobile */
+    display: none; /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
+  }
+  .button p{
+    display: none;
   }
 }
 
