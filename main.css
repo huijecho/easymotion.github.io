@@ -191,6 +191,10 @@ header {
 .button:hover .goto-page {
   color:#0047a2 ;
 }
+.blank{
+  width: 50px;
+  display: none;
+}
 
 /* Mobile devices */
 @media only screen and (max-width: 767px) {
@@ -226,9 +230,12 @@ header {
     overflow: hidden;
     margin-left: 0;
   }
-    .section2{
+  .section2{
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .blank{
+    display: block;
   }
 }
 
