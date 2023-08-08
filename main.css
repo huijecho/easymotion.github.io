@@ -144,6 +144,7 @@ header {
   width: 600px; /* Adjust this percentage to control the width of the slider */
   margin-top:145px; /* Adjust this value to move the container down */
   overflow: hidden;
+  margin-left: 100px;
 }
 
 .section2{
@@ -214,6 +215,16 @@ header {
   }
   .button p{
     display: none;
+  }
+  .section1{
+    height: 450px;
+    flex-direction: column;
+  }
+  .sliderconatainer {
+    width: 500px; /* Adjust this percentage to control the width of the slider */
+    margin-top:0; /* Adjust this value to move the container down */
+    overflow: hidden;
+    margin-left: 0;
   }
 }
 
