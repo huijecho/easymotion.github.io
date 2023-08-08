@@ -229,6 +229,14 @@ header {
     margin-left: 20px;
     margin-right: 20px;
   }
+
+  .button:first-child {
+    margin-left: 100px;
+  }
+  .button:last-child {
+    margin-right: 100px;
+  }
+
 }
 
 /* Tablets and larger devices 
