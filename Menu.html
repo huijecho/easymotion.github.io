@@ -111,27 +111,55 @@
     <section class="content1-2">
         <h1>오시는 길</h1>
 <div id="map" style="width: 500px; height: 400px; position: relative;"></div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d43c3c1c4b49c453821c05f276e636d"></script>
-        <script type="text/javascript">
-            var container = document.getElementById('map'); // 지도를 담을 영역의 DOM 레퍼런스
-            var options = {
-                center: new kakao.maps.LatLng(37.49528839347135, 127.01974836141443), // 지도의 중심좌표
-                level: 3 // 지도의 확대 레벨
-            };
-            
-            var map = new kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
-            
-            // 마커가 표시될 위치입니다 
-            var markerPosition  = new kakao.maps.LatLng(37.49528839347135, 127.01974836141443); 
-            
-            // 마커를 생성합니다
-            var marker = new kakao.maps.Marker({
-                position: markerPosition
-            });
-            
-            // 마커가 지도 위에 표시되도록 설정합니다
-            marker.setMap(map);
-        </script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d43c3c1c4b49c453821c05f276e636d"></script>
+<script type="text/javascript">
+    var container = document.getElementById('map'); // 지도를 담을 영역의 DOM 레퍼런스
+    var options = {
+        center: new kakao.maps.LatLng(37.49528839347135, 127.01974836141443), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+    
+    var map = new kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
+    
+    // 마커가 표시될 위치입니다 
+    var markerPosition = new kakao.maps.LatLng(37.49528839347135, 127.01974836141443); 
+    
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+    
+    // 마커 라벨을 생성합니다
+    var label = document.createElement('div');
+    label.className = 'marker_label';
+    label.style.position = 'absolute';
+    label.style.zIndex = '3';
+    label.style.whiteSpace = 'nowrap';
+    label.style.margin = '-28px 0px 0px -66px';
+    label.style.left = '479px';
+    label.style.top = '302px';
+    
+    var labelText = document.createElement('span');
+    labelText.className = 'label_text';
+    labelText.innerHTML = '서울 서초구 서초대로 350';
+    
+    var link = document.createElement('a');
+    link.href = 'https://map.kakao.com/actions/searchView?q=%EC%84%9C%EC%9A%B8+%EC%84%9C%EC%B4%88%EA%B5%AC+%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C+350&vip=true#!/MORNTP,QNNTUOV/map/bus';
+    link.target = '_blank';
+    link.appendChild(labelText);
+    
+    label.appendChild(link);
+    container.appendChild(label);
+
+    // 마커 클릭 이벤트를 처리합니다
+    kakao.maps.event.addListener(marker, 'click', function() {
+        window.open('https://map.kakao.com/actions/searchView?q=%EC%84%9C%EC%9A%B8+%EC%84%9C%EC%B4%88%EA%B5%AC+%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C+350&vip=true#!/MORNTP,QNNTUOV/map/bus');
+    });
+</script>
+
 
 
 
