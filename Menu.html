@@ -110,47 +110,28 @@
         </section>
     <section class="content1-2">
         <h1>오시는 길</h1>
-<div id="map" style="width:500px; height:400px; position:relative;"></div>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d43c3c1c4b49c453821c05f276e636d"></script>
-<script type="text/javascript">
-    var cont = document.getElementById('map'); // 지도를 담을 영역의 DOM 레퍼런스
-    var opt = {
-        center: new kakao.maps.LatLng(37.49528839347135, 127.01974836141443), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-    var mapObj = new kakao.maps.Map(cont, opt); // 지도 생성 및 객체 리턴
-
-    // 마커가 표시될 위치입니다 
-    var markerPos = new kakao.maps.LatLng(37.49528839347135, 127.01974836141443); 
-
-    // 마커를 생성합니다
-    var mark = new kakao.maps.Marker({
-        position: markerPos
-    });
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-    mark.setMap(mapObj);
-
-    // 마커 라벨 추가
-    var labelDiv = document.createElement('div');
-    labelDiv.style.position = 'absolute';
-    labelDiv.style.zIndex = '3';
-    labelDiv.style.whiteSpace = 'nowrap';
-    labelDiv.style.margin = '10px 0 0 -50px'; // 마커 라벨의 위치 조정
-    labelDiv.style.left = '50%';
-    labelDiv.style.textAlign = 'center';
-
-    var labelText = document.createElement('div');
-    labelText.style.backgroundColor = '#fff';
-    labelText.style.border = '1px solid #ccc';
-    labelText.style.padding = '5px';
-    labelText.style.borderRadius = '5px';
-    labelText.innerText = '서울 서초구 서초대로 350'; // 마커 라벨 텍스트
-
-    labelDiv.appendChild(labelText);
-    cont.appendChild(labelDiv);
-</script>
+<div id="map" style="width: 500px; height: 400px; position: relative;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d43c3c1c4b49c453821c05f276e636d"></script>
+        <script type="text/javascript">
+            var container = document.getElementById('map'); // 지도를 담을 영역의 DOM 레퍼런스
+            var options = {
+                center: new kakao.maps.LatLng(37.49528839347135, 127.01974836141443), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+            
+            var map = new kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
+            
+            // 마커가 표시될 위치입니다 
+            var markerPosition  = new kakao.maps.LatLng(37.49528839347135, 127.01974836141443); 
+            
+            // 마커를 생성합니다
+            var marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+            
+            // 마커가 지도 위에 표시되도록 설정합니다
+            marker.setMap(map);
+        </script>
 
 
 
