@@ -117,55 +117,60 @@
 <div id="map" style="width: 500px; height: 400px; position: relative;"></div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d43c3c1c4b49c453821c05f276e636d"></script>
 <script type="text/javascript">
-    var container = document.getElementById('map'); // 지도를 담을 영역의 DOM 레퍼런스
-    var options = {
-        center: new kakao.maps.LatLng(37.49528839347135, 127.01974836141443), // 지도의 중심좌표
-        level: 2 // 지도의 확대 레벨
-    };
-    
-    var map = new kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
-    
-    // 마커가 표시될 위치입니다 
-    var markerPosition = new kakao.maps.LatLng(37.49528839347135, 127.01974836141443); 
-    
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-    
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);
-    
-    // 마커 라벨을 생성합니다
-    var label = document.createElement('div');
-    label.className = 'marker_label';
-    label.style.position = 'absolute';
-    label.style.zIndex = '5';
-    label.style.whiteSpace = 'nowrap';
-    label.style.margin = '-28px 0px 0px -66px';
-    label.style.left = marker.getPosition().getX() + 'px';
-    label.style.top = (marker.getPosition().getY() + 30) + 'px'; // 마커 아래에 위치하도록 조정
-    
-    var labelText = document.createElement('span');
-    labelText.className = 'label_text';
-    labelText.innerHTML = '서울 서초구 서초대로 350';
-    
-    var link = document.createElement('a');
-    link.href = 'https://kko.to/VDtT12VKOr';
-    link.target = '_blank';
-    link.appendChild(labelText);
-    
-    label.appendChild(link);
-    container.appendChild(label);
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.49528839347135, 127.01974836141443),
+            level: 2
+        };
+        
+        var map = new kakao.maps.Map(container, options);
+        
+        var markerPosition = new kakao.maps.LatLng(37.49528839347135, 127.01974836141443);
+        
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        
+        marker.setMap(map);
+        
+        var label = document.createElement('div');
+        label.className = 'marker_label';
+        label.style.position = 'absolute';
+        label.style.zIndex = '5';
+        label.style.whiteSpace = 'nowrap';
+        label.style.padding = '5px';
+        label.style.backgroundColor = 'white';
+        label.style.border = '1px solid #ccc';
+        label.style.fontSize = '12px';
+        label.style.fontFamily = 'Arial, sans-serif';
+        label.style.margin = '-28px 0px 0px -66px';
 
-    // 마커 클릭 이벤트를 처리합니다
-    kakao.maps.event.addListener(marker, 'click', function() {
-        window.open('https://kko.to/VDtT12VKOr');
-    });
-</script>
+        var labelText = document.createElement('span');
+        labelText.className = 'label_text';
+        labelText.innerHTML = '서울 서초구 서초대로 350';
+        
+        var link = document.createElement('a');
+        link.href = 'https://kko.to/VDtT12VKOr';
+        link.target = '_blank';
+        link.appendChild(labelText);
+        
+        label.appendChild(link);
+        container.appendChild(label);
 
+        // Set label position based on marker position
+        var overlay = new kakao.maps.CustomOverlay({
+            content: label,
+            position: markerPosition
+        });
 
+        // Show the label on the map
+        overlay.setMap(map);
 
+        // Add click event listener to marker
+        kakao.maps.event.addListener(marker, 'click', function() {
+            window.open('https://kko.to/VDtT12VKOr');
+        });
+    </script>
 
     </section>
         <!-- <section class=content1-3>
