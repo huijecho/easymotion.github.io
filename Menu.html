@@ -139,15 +139,15 @@
     label.style.zIndex = '3';
     label.style.whiteSpace = 'nowrap';
     label.style.margin = '-28px 0px 0px -66px';
-    label.style.left = '479px';
-    label.style.top = '302px';
+    label.style.left = marker.getPosition().getX() + 'px';
+    label.style.top = (marker.getPosition().getY() + 30) + 'px'; // 마커 아래에 위치하도록 조정
     
     var labelText = document.createElement('span');
     labelText.className = 'label_text';
     labelText.innerHTML = '서울 서초구 서초대로 350';
     
     var link = document.createElement('a');
-    link.href = 'https://map.kakao.com/actions/searchView?q=%EC%84%9C%EC%9A%B8+%EC%84%9C%EC%B4%88%EA%B5%AC+%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C+350&vip=true#!/MORNTP,QNNTUOV/map/bus';
+    link.href = 'https://kko.to/VDtT12VKOr';
     link.target = '_blank';
     link.appendChild(labelText);
     
@@ -156,7 +156,7 @@
 
     // 마커 클릭 이벤트를 처리합니다
     kakao.maps.event.addListener(marker, 'click', function() {
-        window.open('https://map.kakao.com/actions/searchView?q=%EC%84%9C%EC%9A%B8+%EC%84%9C%EC%B4%88%EA%B5%AC+%EC%84%9C%EC%B4%88%EB%8C%80%EB%A1%9C+350&vip=true#!/MORNTP,QNNTUOV/map/bus');
+        window.open('https://kko.to/VDtT12VKOr');
     });
 </script>
 
