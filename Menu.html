@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="Menu.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bxslider.css" />
+    <!-- https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        // 페이지가 로드되었을 때 실행되는 함수
+        window.onload = function () {
+            // 현재 주소를 가져옴
+            var currentUrl = window.location.href;
+            var newUrl = currentUrl.replace(/\d+$/, '');
+
+            // .container 내부의 링크 요소들을 가져옴
+            var menuItems = document.querySelector('.container').querySelectorAll('a');
+
+            // 각 링크 요소의 href 속성에 현재 주소에 메뉴 아이템 번호를 추가하여 할당
+            menuItems.forEach(function (item, index) {
+                var newItemUrl = newUrl + (index + 1);
+                item.href = newItemUrl;
+            });
+        };
+    </script>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div class="frontheader">
+        <h6>P.O.C. Email: seokho.ahn@easymotion.co.kr | Number: 02-6258-1862 </h6>
+    </div>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images\logo.jpg" alt="Logo" />
+            </a>
+            <ul class="menu">
+                <li>
+                  <a href="Menu.html?menu=1-1">회사소개</a>
+                  <ul class="sub_menu">
+                    <li><a href="Menu.html?menu=1-1">인사말</a></li>
+                    <li><a href="Menu.html?menu=1-2">오시는 길</a></li>
+                    <!-- <li><a href="Menu.html?menu=1-3">menu1-3</a></li> -->
+                  </ul>
+                </li>
+                <li>
+                  <a href="Menu.html?menu=2-1">ROM Builder</a>
+                  <ul class="sub_menu">
+                    <li><a href="Menu.html?menu=2-1">ROM Builder</a></li>
+                    <!-- <li><a href="Menu.html?menu=2-2">menu2-2</a></li>
+                    <li><a href="Menu.html?menu=2-3">menu2-3</a></li> -->
+                  </ul>
+                </li>
+                <li>
+                  <a href="Menu.html?menu=3-1">Ansys</a>
+                  <ul class="sub_menu">
+                    <li><a href="Menu.html?menu=3-1">Ansys</a></li>
+                    <!-- <li><a href="Menu.html?menu=3-2">menu3-2</a></li>
+                    <li><a href="Menu.html?menu=3-3">menu3-3</a></li> -->
+                  </ul>
+                </li>
+                <li>
+                  <a href="Menu.html?menu=4-1">컨설팅</a>
+                  <ul class="sub_menu">
+                    <li><a href="Menu.html?menu=4-1">컨설팅</a></li>
+                    <li><a href="Menu.html?menu=4-2">Engineering</a></li>
+                    <li><a href="Menu.html?menu=4-3">Ansys motion Customization</a></li>
+                    <li><a href="Menu.html?menu=4-4">Toolkit Development</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="Menu.html?menu=5-1">기술지원</a>
+                  <ul class="sub_menu">
+                    <li><a href="Menu.html?menu=5-1">menu5-1</a></li>
+                    <li><a href="Menu.html?menu=5-2">menu5-2</a></li>
+                    <li><a href="Menu.html?menu=5-3">menu5-3</a></li>
+                  </ul>
+                </li>        
+              </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section class="section1">
+            <nav class="bar">
+                <!-- <a href="#">Menu Item 1</a>
+                <a href="#">Menu Item 2</a>
+                <a href="#">Menu Item 3</a> -->
+                <!-- Add more menu items as needed -->
+            </nav>
+        </section>
+    </div>
+    <div class="text">
+        <section class=content1-1>
+            <!-- <h1>Title: 인사말</h1> -->
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>이지모션 홈페이지를 찾아 주신 여러분께 진심으로 환영합니다.</h2>
+            <p>
+                <br><br><br>
+                우리는 혁신적인 CAE 기술을 활용하여 새로운 도전에 임하고 있습니다.<br><br>
+                고객의 요구를 충족시키기 위해 최신 기술과 전문 지식을 바탕으로<br><br>
+                혁신적인 엔지니어링 솔루션을 제공합니다.<br><br><br>
+                <br>
+                우리의 목표는 고객과의 긴밀한 협력을 통해 최상의 결과물을 창출하는 것입니다.<br><br>
+                고객의 목표와 성공을 위해 끊임없이 노력하며, 고객의 신뢰를 최우선으로 생각합니다.<br><br>
+                이를 위해 저희는 열정적이고 창의적인 팀원들과 함께, CAE 기술을 통해 새로운 가능성을<br><br>
+                탐구하고 있습니다. 고객과 함께 성장하고 발전하는 그날을 기대합니다.<br><br><br>
+                <br>
+                다시 한 번 진심으로 환영합니다. 감사합니다.
+                <br><br><br><br><br><br>
+            </p>
+        </section>
+        <section class=content1-2>
+            <h1>오시는 길</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <!-- <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2> -->
+            <div id="map" style="width: 500px; height: 400px;"></div>
+            <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4d43c3c1c4b49c453821c05f276e636d"></script>
+            <script type="text/javascript">
+	
+                var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+                var options = { //지도를 생성할 때 필요한 기본 옵션
+                    center: new kakao.maps.LatLng(37.49528839347135, 127.01974836141443), //지도의 중심좌표.
+                    level: 3 //지도의 레벨(확대, 축소 정도)
+                };
+            
+                var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+                
+            </script> -->
+        </section>
+        <!-- <section class=content1-3>
+            <h1>Title: 메뉴1-3</h1>
+            <img src="images\art3.jpg" alt="Art3" />
+            <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2>
+            <p>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br><br><br><br><br>
+            </p>
+        </section> -->
+        <section class=content2-1>
+            <h1>ROM Builder</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <!-- <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2> -->
+            <p><br><br><br>
+                ROM Builder는 EasyMotion에서 개발하고 있는 툴킷으로<br><br>
+                data 기반의 메타모델을 Deep Learning을 통해 모델 생성을<br><br>
+                자동화 시켜 Realtime Simulation이 가능하게 하는 기능입니다.<br><br>
+                현재 다물체동역학 해석 모델인 Virtual Sensor, Digital twin, HILS와<br><br>
+                같은 모델에서 사용이 가능합니다.<br><br><br><br>
+
+            </p>
+            <img src="images\rom_builder3.gif" alt="ROM Builder" />
+        </section>
+        <section class=content2-2>
+            <h1>Title: 메뉴2-2</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2>
+            <p>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br><br><br><br><br>
+            </p>
+        </section>
+        <section class=content2-3>
+            <h1>Title: 메뉴2-3</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2>
+            <p>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br><br><br><br><br>
+            </p>
+        </section>
+        <section class=content3-1>
+            <h1>Title: 메뉴3-1</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2>
+            <p>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br><br><br><br><br>
+            </p>
+        </section>
+        <section class=content3-2>
+            <h1>Title: 메뉴3-2</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2>
+            <p>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br><br><br><br><br>
+            </p>
+        </section>
+        <section class=content3-3>
+            <h1>Title: 메뉴3-3</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2>
+            <p>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명관련된 설명을 일목요연, 논리정연하게 설명설명 <br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br>
+
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br>
+                관련된 설명을 일목요연, 논리정연하게 설명설명<br><br><br><br><br><br>
+            </p>
+        </section>
+        <section class=content4-1>
+            <h1>컨설팅</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <!-- <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2> -->
+            <p><br><br><br>
+                이지 모션은 Ansys를 기반으로 사용자의 공학적 문제를 엔지니어링<br><br>
+                 기술력을 바탕으로 해결하는 컨설팅을 진행하고 있습니다. <br><br>
+                 또한 사용자 해석 편의성을 위한 맞춤형 툴킷 개발을 진행하고 있습니다.<br><br><br>
+
+            </p>
+            <img src="images\consulting.png" alt="consulting" />
+        </section>
+        <section class=content4-2>
+            <h1>Engineering consulting</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <!-- <h2>소제목 소제목 소제목 소제목소제목 소제목소제목 소제목</h2> -->
+            <p><br><br><br>
+                1. 다물체 동역학 해석<br><br>
+                2. 비선형 시스템에서의 NVH 해석<br><br>
+                3. Co-simulate 및 다분야 해석<br><br>
+
+            </p>
+            <img src="images\multi_body.gif" alt="multi" />
+            <img src="images\nvh.gif" alt="nvh" />
+            <img src="images\hydro.gif" alt="hydro" />
+        </section>
+        <section class=content4-3>
+            <h1>Ansys motion Customization</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>사용자 해석 편의성을 위한 M&S 자동화 툴킷 개발</h2>
+            <p>
+                <br><br><br>
+                사용자 해석 편의성을 위한 M&S 자동화 툴킷 개발<br><br>
+                 - ROM Builder를 통해 Data 기반 메타모델을 Realtime으로<br><br> 
+                결과를 얻을 수 있는 모델을 자동 생성해 주는 툴킷 제공<br><br>
+
+            </p>
+        </section>
+        <section class=content4-4>
+            <h1>Toolkit Development</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <h2>사용자 해석 편의성을 위한 맞춤형 툴킷 개발</h2>
+            <p><br><br><br>
+                 - DriveTrain<br><br>
+                - Links<br><br>
+
+            </p>
+        </section>
+        <section class=content5-1>
+            <h1>기술지원</h1>
+            <!-- <img src="images\art3.jpg" alt="Art3" /> -->
+            <!-- <h2>사용자 해석 편의성을 위한 맞춤형 툴킷 개발</h2> -->
+            <p><br><br><br>
+                 Ansys 제품 및 교육에 대한 궁금하신 사항은 아래 연락처로 문의 바랍니다. <br><br>
+            </p>
+            <img src="images\support.png" alt="support" />
+        </section>
+        <section class=content5-2>
+            <h1>Education</h1>
+            <h2>Motion 사용자 교육을 진행합니다.</h2>
+            <p><br><br><br>
+                1. 기본 모듈 사용 교육<br><br>
+                2. 드라이버트레인 사용 교육<br><br>
+                3. 링크 사용 교육<br><br>
+                4. 카 사용 교육<br><br>
+ <br><br>
+            </p>
+        </section>
+        
+    </div>
+    <div class="footer">
+        <p>㈜이지모션 대표이사 조희제 사업자등록번호 170-88-02907<br>
+            주소 : 서울특별시 서초구 서초대로 350 4층 402호<br>
+            이메일 : seokho.ahn@easymotion.co.kr, 전화번호 : 02-6258-1862 팩스번호 : 02-6499-1861<br>
+          </p>
+    </div>
+    <!-- ------------------------script------------------------- -->
+    <script type="text/javascript">
+        const menuItems = document.querySelectorAll(".menu li");
+        const subMenus = document.querySelectorAll(".sub_menu");
+        function hideAllSubMenus() {
+            subMenus.forEach((subMenu) => {
+                subMenu.style.display = "none";
+            });
+        }
+        menuItems.forEach((menuItem) => {
+            const subMenu = menuItem.querySelector(".sub_menu");
+            menuItem.addEventListener("mouseenter", () => {
+                if (subMenu !== null) {
+                    hideAllSubMenus();
+                    subMenu.style.display = "flex";
+                    console.log("menu on");
+                }
+            });
+        });
+
+        // 각 하위 메뉴에도 마우스 이벤트 추가
+        subMenus.forEach((subMenu) => {
+            subMenu.addEventListener("mouseenter", () => {
+                subMenu.style.display = "flex";
+            });
+
+            subMenu.addEventListener("mouseleave", () => {
+                subMenu.style.display = "none";
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the current URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const menuItemValue = urlParams.get('menu');
+            console.log(menuItemValue);
+
+            const targetSuffix = menuItemValue; // 변수에 뒷부분 클래스 이름 저장
+            const sections = document.querySelectorAll("[class^='content']");
+            sections.forEach((section) => {
+                if (section.classList.contains(`content${targetSuffix}`)) {
+                    section.style.display = "block";
+                    console.log(`Showing: ${section.className}`);
+                } else {
+                    section.style.display = "none";
+                    console.log(`Hiding: ${section.className}`);
+                }
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
