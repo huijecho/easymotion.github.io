@@ -117,7 +117,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  height: 1000px; /* Set the desired height for the image container */
+  height: 900px; /* Set the desired height for the image container */
   overflow: hidden;
 }
 .slogan {
@@ -270,7 +270,7 @@ header {
   position: fixed; /* Change to 'fixed' positioning */
   bottom: 0; /* Align the bottom of the .footer to the bottom of the viewport */
   width: 100%; /* Full width */
-  height: 70px; /* Set the desired height */
+  height: 150px; /* Set the desired height */
   overflow: hidden;
 }
 
