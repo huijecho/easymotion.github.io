@@ -195,42 +195,52 @@ header {
 @media only screen and (max-width: 767px) {
   .navbar {
     flex-direction: column; /* Stack the logo and menu items vertically on small screens */
+    font-size: 8px;
   }
   .logo {
     margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
   }
   .menu {
     flex-direction:row; /* Stack the menu items vertically on small screens */
+    font-size: 8px;
   }
   .menu li {
     margin: 5px 0; /* Adjust the menu item margin for better spacing on mobile */
+    font-size: 8px;
   }
   .sub_menu {
     display: none !important;
     position: static; /* 필요한 경우 정적 위치로 변경 */
+    font-size: 8px;
   }
   .menu li:hover .sub_menu {
-    display: none; /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
+    /* display: none;  */
+    /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
   }
   .button p{
     display: none;
+    font-size: 8px;
   }
   .section1{
     height: 450px;
     flex-direction: column;
+    font-size: 8px;
   }
   .sliderconatainer {
     width: 500px; /* Adjust this percentage to control the width of the slider */
     margin-top:0; /* Adjust this value to move the container down */
     overflow: hidden;
     margin-left: 0;
+    font-size: 8px;
   }
   .section2{
     margin-left: 20px;
     margin-right: 20px;
+    font-size: 8px;
   }
   .button {
     margin: 0;
+    font-size: 8px;
   }
 }
 
