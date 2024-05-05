@@ -231,12 +231,13 @@ header {
     zoom : 0.8;
   }
   .section1{
-    height: 450px;
+    height: 800px;
     flex-direction: column;
     font-size: 8px;
   }
   .sliderconatainer {
-    width: 500px; /* Adjust this percentage to control the width of the slider */
+    height: 300px; /* Adjust this percentage to control the width of the slider */
+    width:auto;
     margin-top:0; /* Adjust this value to move the container down */
     overflow: hidden;
     margin-left: 0;
