@@ -307,7 +307,7 @@ header {
       margin-right: 20px;
       font-size: 8px;
     }
-    .footer p{
-      font-size: 80%;
+    .footer{
+      zoom : 0.5;
     }
   }
