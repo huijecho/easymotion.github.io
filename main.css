@@ -198,7 +198,7 @@ header {
     font-size: 8px;
   }
   .logo {
-    margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
+    margin: 2px 0; /* Adjust the logo margin for better spacing on mobile */
   }
   .menu {
     flex-direction:row; /* Stack the menu items vertically on small screens */
@@ -216,6 +216,7 @@ header {
   .menu li:hover .sub_menu {
     /* display: none;  */
     /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
+    font-size: 8px;
   }
   .button p{
     display: none;
