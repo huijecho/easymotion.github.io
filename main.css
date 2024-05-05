@@ -191,27 +191,41 @@ header {
 .button:hover .goto-page {
   color:#0047a2 ;
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+      transform: scale(0.5); /* 모바일 화면에서만 50% 크기로 축소 */
+      transform-origin: top left; /* 좌측 상단을 기준으로 축소 */
+  }
+}
+
 /* Mobile devices */
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .navbar {
-    flex-direction: column; /* Stack the logo and menu items vertically on small screens */
-  }
+    flex-direction: column;  */
+    /* Stack the logo and menu items vertically on small screens */
+  /* }
   .logo {
-    margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
-  }
+    margin: 10px 0;  */
+    /* Adjust the logo margin for better spacing on mobile */
+  /* }
   .menu {
-    flex-direction:row; /* Stack the menu items vertically on small screens */
-  }
+    flex-direction:row;  */
+    /* Stack the menu items vertically on small screens */
+  /* }
   .menu li {
-    margin: 5px 0; /* Adjust the menu item margin for better spacing on mobile */
-  }
+    margin: 5px 0;  */
+    /* Adjust the menu item margin for better spacing on mobile */
+  /* }
   .sub_menu {
     display: none !important;
-    position: static; /* 필요한 경우 정적 위치로 변경 */
-  }
+    position: static;  */
+    /* * 필요한 경우 정적 위치로 변경 */ 
+  /* }
   .menu li:hover .sub_menu {
-    display: none; /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
-  }
+    display: none;  */
+    /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
+  /* }
   .button p{
     display: none;
   }
@@ -220,9 +234,11 @@ header {
     flex-direction: column;
   }
   .sliderconatainer {
-    width: 500px; /* Adjust this percentage to control the width of the slider */
-    margin-top:0; /* Adjust this value to move the container down */
-    overflow: hidden;
+    width: 500px;  */
+    /* Adjust this percentage to control the width of the slider */
+    /* margin-top:0;  */
+    /* Adjust this value to move the container down */
+    /* overflow: hidden;
     margin-left: 0;
   }
   .section2{
@@ -232,7 +248,9 @@ header {
   .button {
     margin: 0;
   }
-}
+} */
+
+
 
 /* Tablets and larger devices 
 @media only screen and (min-width: 768px) {
