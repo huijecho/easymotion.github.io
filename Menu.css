@@ -267,28 +267,33 @@ header {
     .navbar {
       flex-direction: column; /* Stack the logo and menu items vertically on small screens */
       font-size: 8px;
-
+      zoom : 0.8;
     }
     .logo {
       margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
+      zoom : 0.8;
     }
     .menu {
       flex-direction:row; /* Stack the menu items vertically on small screens */
       font-size: 8px;
+      zoom : 0.8;
     }
     .menu li {
       margin: 5px 0; /* Adjust the menu item margin for better spacing on mobile */
       font-size: 8px;
+      zoom : 0.8;
     }
     .sub_menu {
       display: none !important;
       position: static; /* 필요한 경우 정적 위치로 변경 */
       font-size: 8px;
+      zoom : 0.8;
     }
     .menu li:hover .sub_menu {
       /* display: none;  */
       /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
       font-size: 8px;
+      zoom : 0.8;
     }
     .button p{
       display: none;
@@ -301,5 +306,8 @@ header {
       margin-left: 20px;
       margin-right: 20px;
       font-size: 8px;
+    }
+    .footer{
+      zoom : 0.5;
     }
   }
