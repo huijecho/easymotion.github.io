@@ -194,7 +194,7 @@ header {
 
 @media only screen and (max-width: 768px) {
   body {
-      transform: scale(0.5); /* 모바일 화면에서만 50% 크기로 축소 */
+      transform: scale(0.3); /* 모바일 화면에서만 50% 크기로 축소 */
       transform-origin: top left; /* 좌측 상단을 기준으로 축소 */
   }
 }
