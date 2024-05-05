@@ -231,14 +231,28 @@ header {
     zoom : 0.8;
   }
   .section1{
-    height: 800px;
+    height: 600px;
+    width: auto;
     flex-direction: column;
-    font-size: 8px;
   }
+  .slogan h2 {
+    margin-top: 30%;
+    font-size: 25px; 
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .slogan h4 {
+    font-size: 15px;
+    margin: -15px 0; /* Adjust the margin value to reduce the vertical spacing */
+    line-height: 2;
+  }  
+
+
+
   .sliderconatainer {
-    height: 300px; /* Adjust this percentage to control the width of the slider */
-    width:auto;
-    margin-top:0; /* Adjust this value to move the container down */
+    zoom : 0.5;
+    margin-top:10%; /* Adjust this value to move the container down */
     overflow: hidden;
     margin-left: 0;
     font-size: 8px;
@@ -253,6 +267,9 @@ header {
     margin: 0;
     font-size: 8px;
     zoom : 0.8;
+  }
+  .footer{
+    zoom : 0.5;
   }
 }
 
