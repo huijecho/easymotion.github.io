@@ -1,313 +1,362 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Pretendard-Regular', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard-Regular', sans-serif;
 }
 
 .frontheader {
-    height: 3vh;
-    /* Set the height as per your desired blank space size */
-    background-color: #ffffff;
-    /* Optionally, set a background color for the blank space */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    /* Set a higher z-index to keep it above other content */
+  height: 3vh;
+  /* Set the height as per your desired blank space size */
+  background-color: #ffffff;
+  /* Optionally, set a background color for the blank space */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Set a higher z-index to keep it above other content */
 }
 
 .frontheader h6 {
-    text-align: right;
-    margin: 5px 0 0 10px; /* Adjust the margin-top value */
+  text-align: right;
+  margin: 5px 0 0 10px;
+  /* Adjust the margin-top value */
 }
 
 header {
-    width: 100%;
-    background-color: #ffffff;
-    color: #fff;
-    position: fixed;
-    top: 3vh;
-    /* Set the top position to avoid overlapping with frontheader */
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    /* Set a higher z-index to keep it above other content */
+  width: 100%;
+  background-color: #ffffff;
+  color: #fff;
+  position: fixed;
+  top: 3vh;
+  /* Set the top position to avoid overlapping with frontheader */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* Set a higher z-index to keep it above other content */
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    /* 로고 이미지와 메뉴 항목들 수직 가운데 정렬 */
-    justify-content: center;
-    border-top: 0.5px solid #cccccc5d;
-    /* 아래쪽에 회색 선 추가 */
-    border-bottom: 2px solid #ccccccb5;
-    /* 아래쪽에 회색 선 추가 */
-    position: relative;
+  display: flex;
+  align-items: center;
+  /* 로고 이미지와 메뉴 항목들 수직 가운데 정렬 */
+  justify-content: center;
+  border-top: 0.5px solid #cccccc5d;
+  /* 아래쪽에 회색 선 추가 */
+  border-bottom: 2px solid #ccccccb5;
+  /* 아래쪽에 회색 선 추가 */
+  position: relative;
 }
 
 .logo {
-    margin-right: 20px;
-    /* 로고와 메뉴 항목들 사이 간격 */
-    height: 60px;
-    /* 네비게이션 바 높이 설정 */
-    width: auto;
-    /* 네비게이션 바 너비 자동 조절 */
+  margin-right: 20px;
+  /* 로고와 메뉴 항목들 사이 간격 */
+  height: 60px;
+  /* 네비게이션 바 높이 설정 */
+  width: auto;
+  /* 네비게이션 바 너비 자동 조절 */
 }
 
 .logo img {
-    height: 100%;
-    /* 로고 이미지 세로로 꽉 차게 설정 */
-    width: auto;
-    /* 이미지 너비 자동 조절 */
+  height: 100%;
+  /* 로고 이미지 세로로 꽉 차게 설정 */
+  width: auto;
+  /* 이미지 너비 자동 조절 */
 }
 
 .menu {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .menu li {
-    position: relative;
-    margin-right: 70px;
+  position: relative;
+  margin-right: 70px;
 }
 
 .menu li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .menu li a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-    padding: 5px 10px;
-    font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  padding: 5px 10px;
+  font-weight: bold;
 }
 
 .menu li a:hover {
-    color: #0047a2;
-    /* 마우스 오버시 글자색 변경 */
+  color: #0047a2;
+  /* 마우스 오버시 글자색 변경 */
 }
 
 
 /* 하위 메뉴 스타일 */
 .sub_menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    /* 상위 메뉴 아래에 위치하도록 조정 */
-    left: 0;
-    background-color: #fadd65;
-    padding: 0.5px;
-    /* 간격 추가 */
-    z-index: 1;
-    /* .navbar보다 낮은 z-index 값을 가지도록 설정 */
-    white-space: nowrap;
-    /* 줄바꿈 없이 한 줄로 나타나도록 설정 */
-    list-style-type: none;
-    /* width: 100vw; */
-    border-radius: 5px;
+  display: none;
+  position: absolute;
+  top: 50px;
+  /* 상위 메뉴 아래에 위치하도록 조정 */
+  left: 0;
+  background-color: #fadd65;
+  padding: 0.5px;
+  /* 간격 추가 */
+  z-index: 1;
+  /* .navbar보다 낮은 z-index 값을 가지도록 설정 */
+  white-space: nowrap;
+  /* 줄바꿈 없이 한 줄로 나타나도록 설정 */
+  list-style-type: none;
+  /* width: 100vw; */
+  border-radius: 5px;
 }
 
 .menu li:hover .sub_menu {
-    display: flex;
+  display: flex;
 }
 
 .sub_menu li {
-    /* 외부 여백 */
-    margin: 1px;
-    /* 내부 여백 */
-    padding: 5px;
+  /* 외부 여백 */
+  margin: 1px;
+  /* 내부 여백 */
+  padding: 5px;
 }
 
 .sub_menu li a {
-    color: #000000;
-    text-decoration: none;
+  color: #000000;
+  text-decoration: none;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .section1 {
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#0047a2;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw;
-    height: 15vh;
-    /* Set the desired height for the image container */
-    overflow: hidden;
-    position: relative; /* Add this */
-}
-
-.bar {
-    flex: 0 0 100vw; /* Set the width of the .bar div to 200px */
-    display: flex;
-    justify-content: center; /* Center-align menu items horizontally */
-    background-color: #f2f2f2;
-    position: absolute; /* Change this */
-    bottom: 0; /* Align the bottom of .bar with the bottom of .section1 */
-    left: 0; /* Align .bar to the left edge */
-    right: 0; /* Align .bar to the right edge */
-  }
-  
-  .bar a {
-    display: block;
-    padding: 12px 16px; /* Add padding to create spacing between menu items */
-    text-decoration: none;
-    color: #000000; /* Set the text color for menu items */
-  }
-  
-  .bar a:hover {
-    background-color: #ddd; /* Set the background color for menu items on hover */
-  }
-
-  .content {
-    flex: 1;
-    background-color: #ffffff;
-  }
-  
-  .content img {
-    max-width: 100%; /* Ensure the image does not exceed the width of the .content div */
-    display: block;
-    margin: auto; /* Center the image horizontally within .content div */
-  }
-
-  @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .footer {
+  margin-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#fadd65;
+  background-color: #0047a2;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: fixed; /* Change to 'fixed' positioning */
-  bottom: 0; /* Align the bottom of the .footer to the bottom of the viewport */
-  width: 100%; /* Full width */
-  height: 70px; /* Set the desired height */
+  width: 100vw;
+  height: 15vh;
+  /* Set the desired height for the image container */
+  overflow: hidden;
+  position: relative;
+  /* Add this */
+}
+
+.bar {
+  flex: 0 0 100vw;
+  /* Set the width of the .bar div to 200px */
+  display: flex;
+  justify-content: center;
+  /* Center-align menu items horizontally */
+  background-color: #f2f2f2;
+  position: absolute;
+  /* Change this */
+  bottom: 0;
+  /* Align the bottom of .bar with the bottom of .section1 */
+  left: 0;
+  /* Align .bar to the left edge */
+  right: 0;
+  /* Align .bar to the right edge */
+}
+
+.bar a {
+  display: block;
+  padding: 12px 16px;
+  /* Add padding to create spacing between menu items */
+  text-decoration: none;
+  color: #000000;
+  /* Set the text color for menu items */
+}
+
+.bar a:hover {
+  background-color: #ddd;
+  /* Set the background color for menu items on hover */
+}
+
+.content {
+  flex: 1;
+  background-color: #ffffff;
+}
+
+.content img {
+  max-width: 100%;
+  /* Ensure the image does not exceed the width of the .content div */
+  display: block;
+  margin: auto;
+  /* Center the image horizontally within .content div */
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fadd65;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  /* Change to 'fixed' positioning */
+  bottom: 0;
+  /* Align the bottom of the .footer to the bottom of the viewport */
+  width: 100%;
+  /* Full width */
+  height: 70px;
+  /* Set the desired height */
   overflow: hidden;
 }
 
-.footer p{
-  color:#000000;
+.footer p {
+  color: #000000;
   /* font-style:oblique; */
 }
+
 .text {
-    flex: 1;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-align horizontally */
-    text-align: left; /* Center-align text content */
-    margin: 0 auto; /* Horizontally center the .text container */
+  flex: 1;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center-align horizontally */
+  text-align: left;
+  /* Center-align text content */
+  margin: 0 auto;
+  /* Horizontally center the .text container */
 }
-.text img{
-    max-width: 100%; /* Ensure the image does not exceed the width of the .content div */
-    display: block;
-    margin: auto; /* Center the image horizontally within .content div */
+
+.text img {
+  max-width: 100%;
+  /* Ensure the image does not exceed the width of the .content div */
+  display: block;
+  margin: auto;
+  /* Center the image horizontally within .content div */
 }
+
 .content3-1 {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   max-width: 900px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .image-container {
   display: flex;
-  justify-content: space-between; /* 이미지를 가로로 공간 나눠 배치합니다. */
-  width: 100%; /* 부모 요소의 전체 너비를 차지하도록 설정합니다. */
-  align-items: flex-end; /* 이미지를 아래쪽으로 정렬합니다. */
-  padding: 0 5px; /* 이미지 컨테이너의 좌우 패딩을 추가하여 이미지 사이의 간격을 조절합니다. */
+  justify-content: space-between;
+  /* 이미지를 가로로 공간 나눠 배치합니다. */
+  width: 100%;
+  /* 부모 요소의 전체 너비를 차지하도록 설정합니다. */
+  align-items: flex-end;
+  /* 이미지를 아래쪽으로 정렬합니다. */
+  padding: 0 5px;
+  /* 이미지 컨테이너의 좌우 패딩을 추가하여 이미지 사이의 간격을 조절합니다. */
 }
 
 
 .image-container img {
-  width: 90%; /* 이미지의 너비를 90%로 설정하여 각 이미지의 크기를 조정합니다. */
-  margin-top: auto; /* 이미지의 위 여백을 자동으로 설정하여 아래쪽 라인을 공유합니다. */
+  width: 90%;
+  /* 이미지의 너비를 90%로 설정하여 각 이미지의 크기를 조정합니다. */
+  margin-top: auto;
+  /* 이미지의 위 여백을 자동으로 설정하여 아래쪽 라인을 공유합니다. */
 }
 
 
 .content4-2 {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 수직 가운데 정렬 */
+  align-items: center;
+  /* 수직 가운데 정렬 */
   max-width: 600px;
   margin: 0 auto;
 }
 
 .image-container_small {
   display: flex;
-  justify-content: center; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
+  justify-content: center;
+  /* 수평 가운데 정렬 */
+  align-items: center;
+  /* 수직 가운데 정렬 */
   width: 100%;
 }
 
 .image-container_small img {
-  width: 7  0%; /* 이미지의 크기를 조절합니다. */
+  width: 7 0%;
+  /* 이미지의 크기를 조절합니다. */
 }
 
 /* Mobile devices */
 @media only screen and (max-width: 767px) {
 
-    .navbar {
-      flex-direction: column; /* Stack the logo and menu items vertically on small screens */
-      font-size: 8px;
-      zoom : 0.8;
-    }
-    .logo {
-      margin: 10px 0; /* Adjust the logo margin for better spacing on mobile */
-      zoom : 0.8;
-    }
-    .menu {
-      flex-direction:row; /* Stack the menu items vertically on small screens */
-      font-size: 8px;
-      zoom : 0.8;
-    }
-    .menu li {
-      margin: 5px 0; /* Adjust the menu item margin for better spacing on mobile */
-      font-size: 8px;
-      zoom : 0.8;
-    }
-    .sub_menu {
-      display: none !important;
-      position: static; /* 필요한 경우 정적 위치로 변경 */
-      font-size: 8px;
-      zoom : 0.8;
-    }
-    .menu li:hover .sub_menu {
-      /* display: none;  */
-      /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
-      font-size: 8px;
-      zoom : 0.8;
-    }
-    .button p{
-      display: none;
-    }
-    .section1 {
-        margin-top: 50px;
-        font-size: 8px;
-    }
-        .text{
-      margin-left: 20px;
-      margin-right: 20px;
-      font-size: 8px;
-    }
-    .footer{
-      zoom : 0.5;
-    }
+  .navbar {
+    flex-direction: column;
+    /* Stack the logo and menu items vertically on small screens */
+    font-size: 8px;
+    zoom: 0.8;
   }
+
+  .logo {
+    margin: 10px 0;
+    /* Adjust the logo margin for better spacing on mobile */
+    zoom: 0.8;
+  }
+
+  .menu {
+    flex-direction: row;
+    /* Stack the menu items vertically on small screens */
+    font-size: 8px;
+    zoom: 0.8;
+  }
+
+  .menu li {
+    margin: 5px 0;
+    /* Adjust the menu item margin for better spacing on mobile */
+    font-size: 8px;
+    zoom: 0.8;
+  }
+
+  .sub_menu {
+    display: none !important;
+    position: static;
+    /* 필요한 경우 정적 위치로 변경 */
+    font-size: 8px;
+    zoom: 0.8;
+  }
+
+  .menu li:hover .sub_menu {
+    /* display: none;  */
+    /* 모바일에서는 하위 메뉴를 호버해도 표시하지 않음 */
+    font-size: 8px;
+    zoom: 0.8;
+  }
+
+  .button p {
+    display: none;
+  }
+
+  .section1 {
+    margin-top: 50px;
+    font-size: 8px;
+  }
+
+  .text {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 8px;
+  }
+
+  .footer {
+    zoom: 0.5;
+  }
+}
